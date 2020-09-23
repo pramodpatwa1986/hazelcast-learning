@@ -1,4 +1,4 @@
-package com.mywork.hazelcast.hazelcast.cluster;
+package com.mywork.hazelcast.hazelcast.cluster.member2;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 import com.hazelcast.core.HazelcastInstance;
 import com.hazelcast.map.IMap;
+import com.mywork.hazelcast.hazelcast.cluster.Customer;
 
 @Service
 public class CustomerService{
@@ -20,7 +21,7 @@ public class CustomerService{
 	private HazelcastInstance  hazelcastInstance;
 	private IMap<Long, Customer> customerMap;
 	
-	public CustomerService (@Qualifier("member1") HazelcastInstance hazelcastInstance ) {
+	public CustomerService (@Qualifier("member2") HazelcastInstance hazelcastInstance ) {
 		this.hazelcastInstance = hazelcastInstance;
 	}
 	

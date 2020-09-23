@@ -16,7 +16,7 @@ public class HazelcastClusterMember2Application {
 		SpringApplication.run(HazelcastClusterMember2Application.class, args);
 	}
 	
-	@Bean(destroyMethod="shutdown")
+	@Bean(name = "member2",destroyMethod="shutdown")
 	public HazelcastInstance createMember2() {
 		return Hazelcast.newHazelcastInstance();
 	}
