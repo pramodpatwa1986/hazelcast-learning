@@ -54,4 +54,8 @@ public class CustomerService{
 	public List<Customer> getCustomers(){		
 		return new ArrayList<Customer>(customerMap.values());
 	}
+	
+	public Customer getCustomer(Long id){		
+		return customerMap.get(id);
+	}
 }

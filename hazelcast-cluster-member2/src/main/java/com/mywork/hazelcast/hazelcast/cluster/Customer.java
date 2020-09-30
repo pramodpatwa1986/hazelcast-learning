@@ -3,10 +3,15 @@ package com.mywork.hazelcast.hazelcast.cluster;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Customer implements Serializable {
 
 	private static final long serialVersionUID = -6408662351929206221L;
 
+	@Id
 	private Long id;
 	private String name;
 	private Date dob;
